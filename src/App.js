@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import SharedLayout from './uiComponents/SharedLayout';
+import Home from './uiComponents/Home'
+import ProductsPage from './uiComponents/ProductsPage'
+import Error from './uiComponents/Error'
+//materailUi baseline Styling applied
+import { CssBaseline} from '@mui/material'
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <CssBaseline/>
+      <Router>
+        <Routes>
+          <Route path='/' element = {<SharedLayout/>}>
+            <Route index element = {<Home/>}/>
+            <Route path='/products' element = {<ProductsPage/>}/>
+          </Route>
+          <Route path='*' element = {<Error/>}/>
+        </Routes>
+      </Router>
+    </>
   );
 }
 
