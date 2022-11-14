@@ -4,9 +4,6 @@ import ButtonComp from '../utilityComponents/Button'
 import { useStyles } from '../styleComponents/useStyles'
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { colors } from '../styleComponents/colors';
-
-
 
 
 const NavBar = () => {
@@ -16,8 +13,8 @@ const NavBar = () => {
     <>
       <AppBar variant = 'static' className={classes.navBar}>
         
-        <Toolbar >
-          <Grid container alignItems='center' className={classes.centerItems}>
+        <Toolbar sx = {{maxWidth: "1300px", position: "relative", minWidth: '100%'}}  >
+          <Grid container alignItems='center' className={classes.toolBarStyles}>
             <Grid item>
               <ButtonComp className = {classes.logoStyle}/>
             </Grid>
@@ -26,6 +23,7 @@ const NavBar = () => {
               <InputBase className={classes.inputStyles} 
                 placeholder='search'
                 startAdornment = {<SearchIcon fontSize='sm'
+                size = 'medium'
                 />}
               />
               <Button variant='contained' className={classes.searchBtnStyle}>
@@ -35,7 +33,7 @@ const NavBar = () => {
 
             <Grid item >
               <Button>
-                <Badge badgeContent = {2} color = "primary">
+                <Badge badgeContent = {1} color = "primary">
                   <ShoppingCartIcon className={classes.cartIconStyle} />
                 </Badge>
               </Button>

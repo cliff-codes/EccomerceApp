@@ -1,9 +1,9 @@
 import React from 'react'
-
+import showcasePic from '../pics/showcase.jpg'
 const ProductsPage = () => {
   return (
     <div>
-      ProductsPage
+      showcase
     </div>
   )
 }
