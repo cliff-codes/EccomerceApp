@@ -14,7 +14,6 @@ const SharedLayout = () => {
       <NavBar/>
       <main>
         <Outlet/>
-        <LatestProducts/>
       </main>
       <footer>
         <Footer/>

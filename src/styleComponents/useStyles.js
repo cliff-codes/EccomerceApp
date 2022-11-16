@@ -26,6 +26,11 @@ export const useStyles = makeStyles()((theme) => {
             display: 'flex',
             justifyContent: 'space-around'
         },
+        navMedia : {
+            border: '1px solid green',
+            display: 'grid',
+            gridTemplateColumns: 'repeat(12,1fr)'
+        },      
         centerItems: {
             display: 'flex',
             alignItems: "center"
@@ -56,6 +61,12 @@ export const useStyles = makeStyles()((theme) => {
             flexDirection: 'column',
             justifyContent: 'space-between'
         },
+        footerBackground: {
+            background: `${colors.dark}`,
+            display: 'flex',
+            height: 'auto',
+            alignItems: 'center'
+        },
         footerStyles: {
             height: 'auto',
             background: `${colors.dark}`,
@@ -63,7 +74,9 @@ export const useStyles = makeStyles()((theme) => {
             justifyContent: 'center',
             alignItems: 'center',
             padding: '10px 0',
-            boxSizing: 'border-box'
+            boxSizing: 'border-box',
+            width: '100%',
+            textAlign: 'center',
         },
         footerInput: {
             background: 'white',
@@ -92,6 +105,12 @@ export const useStyles = makeStyles()((theme) => {
             '&:hover' : {
                 transform: 'scale(1.1)'
             }
+        },
+        cardImgStyle: {
+            paddingTop: '56.25%',
+            backgroundPosition: 'center',
+            objectFit: 'contain',
+            backgroundSize: 'contain'
         }
     }
 })

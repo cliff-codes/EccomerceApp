@@ -2,6 +2,7 @@ import React from 'react'
 import { useStyles } from '../styleComponents/useStyles'
 import { Button, Card, CardContent, Container } from '@mui/material'
 import { Link } from 'react-router-dom'
+import LatestProducts from './LatestProducts'
 
 
 
@@ -21,6 +22,7 @@ const Home = () => {
             </Link>
           </div>
         </CardContent>
+        <LatestProducts/>
       </Container>
     </>
   )
