@@ -14,7 +14,7 @@ const Nav = () => {
       <nav>
         <div className='logoAndMenu'>
           <div className='menuIcon'><MenuIcon/></div>
-          <Logo/>
+          <Logo logoColor={'#1b76ff'}/>
         </div>
         <div className='search'>
           <SearchBar/>

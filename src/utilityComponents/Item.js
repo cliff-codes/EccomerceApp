@@ -9,8 +9,9 @@ const formatName = (name) => {
 
 const Item = ({item}) => {
     const {id} = item
+    const {category} = item
   return (
-    <Link to = {`/${id}`} className='link'>
+    <Link to = {`/${category}/${id}`} className='link'>
         <Card className='card'>
             <CardMedia className='cardImg' sx = {{
                 paddingTop: '56.25%',
