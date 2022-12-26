@@ -1,0 +1,11 @@
+.CartAndFavorite{
+    padding: 5px 0;
+    display: flex;
+    gap: 8px;
+}
+
+.logoAndMenu{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

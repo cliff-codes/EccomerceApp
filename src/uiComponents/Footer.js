@@ -1,41 +1,35 @@
 import React from 'react'
-import { Grid, Container, Typography, Input, Button, useMediaQuery } from '@mui/material'
-import ButtonComp from '../utilityComponents/Button'
-import { useStyles } from '../styleComponents/useStyles'
+import Logo from './Logo'
+import { OutlinedInput } from '@mui/material'
+import MyButton from '../utilityComponents/Button'
+
+//styles
+import './Footer.css'
+
 const Footer = () => {
-  const {classes} = useStyles()
-  const matches = useMediaQuery(('max-width: 480px'))
   return (
-    <Container maxWidth = 'xl' className= { classes.footerBackground}>
-        <Grid container  className={classes.footerStyles} >
-        <Grid item xs = {12} sm = {6} md = {3}>
-          <ButtonComp/>
-        </Grid>
-
-        <Grid item xs = {12} sm = {6} md = {3} alignItems = 'center'>
-          <Typography variant = 'h7' color = 'white'>
-            Are you new to shop Quickie?.<br/>
-            subscribe to our newsletter <br/>
-            so that you will be notified whenever<br/>
-            there are new deals.
-          </Typography>
-          <div>
-            <Input className= {classes.footerInput} placeholder='enter your email'/>
-            <Button className={classes.searchBtnStyle}>subscribe</Button>
-          </div>
-        </Grid>
-
-        <Grid item xs = {12} sm = {6} md = {3}>
-          <Typography variant='h6' color='white'>Contact us</Typography>
-          <Typography variant='h7' color='white'>
-            cliffordadomah2580@gmail.com
-          </Typography><br/>
-          <Typography variant='h7' color='white'>
-            +233 558776503
-          </Typography>
-        </Grid>
-      </Grid>
-    </Container>
+    <footer>
+      <div className='sectionOne'>
+        <Logo logoColor={'#1b76ff'}/>
+      </div>
+        <div className='contact'>
+          <div className='title'>Contact Us</div>
+          <div className='phone'>+233558776503</div>
+          <div className='email'>visiostudios@gmail.com</div>
+        </div>
+        <div className='subScription'>
+            <div>
+                <OutlinedInput placeholder='Enter your email' sx = {
+                  {
+                    height: "40px",
+                    borderRadius: "14px",
+                    backgroundColor: '#f1f1f1'
+                  }
+                }/>
+            </div>
+            <MyButton styleType={'contained'} BtnName = {'Subscribe'}/>
+        </div>
+    </footer>
   )
 }
 

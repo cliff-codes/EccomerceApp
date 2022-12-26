@@ -1,0 +1,39 @@
+nav{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(2,50px);
+    grid-template-areas: 
+    'l l l l . . . . c c c c'
+    's s s s s s s s s s s s';
+    margin: 16px 0 0 0;
+}
+
+nav .logoAndMenu{
+    grid-area: l;
+}
+
+nav .search{
+    grid-area: s;
+}
+
+nav .CartAndFavorite{
+    grid-area: c;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+
+@media screen and (min-width : 600px) {
+    nav{
+        grid-template-rows: repeat(1,50px);
+        grid-template-areas: 
+        'l l l s s s s s s c c c';
+        align-items: center;
+    }
+
+    nav .menuIcon{
+        display: none;
+    }
+}
