@@ -1,0 +1,39 @@
+.detailsSection{
+    width: 100%;
+    padding: 32px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.ratings{
+    display: flex;
+}
+
+.price{
+    font-weight: 600;
+}
+
+.quantity{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.cartControllers{
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+@media screen and (min-width: 900px) {
+    .detailsSection{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
