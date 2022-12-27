@@ -6,6 +6,8 @@ nav{
     'l l l l . . . . c c c c'
     's s s s s s s s s s s s';
     margin: 16px 0 0 0;
+    align-items: center;
+    justify-content: center;
 }
 
 nav .logoAndMenu{

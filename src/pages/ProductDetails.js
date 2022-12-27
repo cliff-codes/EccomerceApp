@@ -3,8 +3,9 @@ import { useParams } from 'react-router-dom'
 import SideNav from '../utilityComponents/SideNav'
 import { getItem, reqStatus, item } from '../app/features/singleItem/singleItemSlice'
 import { useDispatch, useSelector } from 'react-redux'
-import ControllerBtn from '../utilityComponents/ControllerBtn'
-import MyButton from '../utilityComponents/Button'
+import { nanoid } from '@reduxjs/toolkit'
+//from cartSlice
+import { addToCart } from '../app/features/cart/cartSlice'
 
 //Styled compoments from materail ui
 import { Button, Card, CardMedia, CircularProgress, Typography } from '@mui/material'
@@ -108,7 +109,13 @@ const ProductDetails = () => {
               <div className='addToCartBtn'>
                 <Button variant='contained' sx={{
                   borderRadius: "13px"
-                }} onClick = {() => console.log('clicked')}>Add To Cart</Button>
+                }} onClick = {
+                  () => dispatch(addToCart({
+                    ...selectedeItem,
+                    cartId: nanoid(4),
+                    quantity: counter
+                  }))
+                }>Add To Cart</Button>
               </div>
             </div>
             </div>

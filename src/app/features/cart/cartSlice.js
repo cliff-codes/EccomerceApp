@@ -16,3 +16,5 @@ const cartItemsSlice = createSlice({
 })
 
 export default cartItemsSlice.reducer
+export const {addToCart} = cartItemsSlice.actions 
+export const totalItems = (state) => state.cartReducer.cartItems 
