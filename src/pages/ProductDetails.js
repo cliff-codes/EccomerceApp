@@ -108,7 +108,7 @@ const ProductDetails = () => {
               <div className='addToCartBtn'>
                 <Button variant='contained' sx={{
                   borderRadius: "13px"
-                }}>Add To Cart</Button>
+                }} onClick = {() => console.log('clicked')}>Add To Cart</Button>
               </div>
             </div>
             </div>
