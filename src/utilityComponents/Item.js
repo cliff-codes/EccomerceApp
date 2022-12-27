@@ -17,7 +17,7 @@ const Item = ({item}) => {
                 paddingTop: '56.25%',
                 backgroundSize: 'contain',
             }}  image = {`${item.image}`}/>
-            <CardContent>
+            <CardContent className='content'>
                 <Typography className='price'>
                     {formatName(item.title)}
                 </Typography>

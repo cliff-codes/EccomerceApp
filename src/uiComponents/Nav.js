@@ -2,7 +2,6 @@ import React from 'react'
 import MenuIcon from '@mui/icons-material/Menu'
 import Logo from './Logo'
 import SearchBar from './SearchBar'
-import Favorites from './Favorites'
 import CartIcon from './CartIcon'
 
 //custom Styles
@@ -20,7 +19,6 @@ const Nav = () => {
           <SearchBar/>
         </div>
         <div className='CartAndFavorite'>
-          <Favorites/>
           <CartIcon/>
         </div>
       </nav>

@@ -8,6 +8,7 @@ import SharedLayout from './pages/SharedLayout'
 import Error from './pages/Error';
 import Home from './pages/Home';
 import ProductDetails from './pages/ProductDetails';
+import CartPage from './pages/CartPage';
 
 function App() {
   return (
@@ -18,7 +19,9 @@ function App() {
           <Routes>
             <Route path='/' element = {<SharedLayout/>}>
               <Route index element = {<Home/>}/>
+              <Route path='/cart' element = {<CartPage/>}/>
               <Route path='/:category/:id' element = {<ProductDetails/>}/>
+              <Route path='*' element = {<Error/>}/>
             </Route>
             <Route path='*' element = {<Error/>}/>
           </Routes>
