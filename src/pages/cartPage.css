@@ -18,13 +18,15 @@
     min-height: 300px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .cartPage .wrapper{
     display: flex;
     flex-direction: column;
     gap: 24px;
+    align-items: center;
+    position: relative;
 }
 
 
@@ -34,15 +36,18 @@
 
 .cartPage .item{
     display: flex;
-    gap: 16px;
+    gap: 24px;
+    padding: 8px 8px;
+    border-radius: 4px;
     align-items: center;
-    justify-content: space-between;
     transition: all .05s ease;
+    width: 100%;
+    justify-content: space-around;
+    box-sizing: border-box;
 }
 
 .cartPage .item:hover{
     background-color: #f1f1f1;
-    padding: 16px 8px;
     box-sizing: border-box;
 }
 

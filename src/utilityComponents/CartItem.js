@@ -1,12 +1,26 @@
+import React,{useState} from 'react'
 import { Button } from '@mui/material'
-import React from 'react'
+import { removeItem } from '../app/features/cart/cartSlice'
+import { useDispatch } from 'react-redux'
 
 const CartItem = ({item}) => {
+    const dispatch = useDispatch()
 
     const {image} = item
     const {price} = item
     const {title} = item
     const {quantity} = item
+    const {cartId} = item
+    const [itemQuantity,setItemQuantity] = useState(quantity)
+
+    const increment = () => {
+        setItemQuantity(itemQuantity => itemQuantity + 1)
+    }
+    const decrement = () => {
+        if(itemQuantity > 1){
+            setItemQuantity(itemQuantity => itemQuantity - 1)
+        }
+    }
 
   return (
     <div className='item'>
@@ -24,7 +38,12 @@ const CartItem = ({item}) => {
                 color: "#ffffff",
                 height: "25px",
                 borderRadius: "12px"
-            }}>
+            }}
+                //delete Item
+                onClick = {() => {
+                    dispatch(removeItem(cartId))
+                }}
+            >
                 remove
             </Button>
         </div>
@@ -39,8 +58,10 @@ const CartItem = ({item}) => {
                 borderRadius: "50%",
                 background: '#f1f1f1',
                 color: "#707070",
-                }} className = "ctrlBtn">-</Button>
-            <div className='value'>{quantity}</div>
+                }} className = "ctrlBtn"
+                onClick={decrement}
+                >-</Button>
+            <div className='value'>{itemQuantity}</div>
             <Button variant='contained' sx={{
                 minWidth: "0px",
                 width: "30px",
@@ -49,9 +70,10 @@ const CartItem = ({item}) => {
                 background: '#f1f1f1',
                 color: "#707070"
             }} className = "ctrlBtn"
+            onClick={increment}
             >+</Button>
         </div>
-        <div className='price'>{`$${price * quantity}`}</div>
+        <div className='price'>{`$${price * itemQuantity}`}</div>
       </div>
 
     </div>
